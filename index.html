@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pizza Order</title>
+    <style>
+        body {
+            position: relative;
+            font-family: 'Source Sans Pro',sans-serif;
+            background-image: url(./Images/pizza6.jpg);
+            background-size:cover;
+            background-repeat: no-repeat;
+        }
+        .container {
+            display: flex;
+            height: 100vh;
+            flex-direction: column;
+            
+        }
+        .formular {
+            display: flex;
+            justify-content: center;  
+        }
+
+        .h1 {
+            display: flex;
+            justify-content:center;
+        }
+
+        .h2 {
+            display: flex;
+            justify-content: center;
+            
+        }
+        input[type=submit]:hover {
+            color: white;
+            background-color: rgb(228, 156, 67);
+            
+        }
+        input[type=submit] {
+        background-color: #04AA6D;
+        color: white;
+        padding: 7px 12px;
+        border: none;
+        border-radius: 2px;
+        cursor: pointer;
+        float: left;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="h1">
+        <h1>Pizza Haus</h1>
+    </div>
+    <div class="h2">
+        <h2>Bestellen Sie Ihre Pizza!</h2>
+    </div>
+    <div class="formular">
+        <form action="bestellung.php" method="post" name="myFormular">
+        
+            <fieldset>
+                <legend>Persoenlichen Daten </legend><br>   
+                <label for="vname">Vorname</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" id="vname" name="vorname" required> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="nname">Nachname</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" id="nname" name="nachname" required><br><br>
+                <label for="tnummer">Telefonnummer</label>&nbsp;&nbsp;
+                <input type="tel" id="tnummer" name="tnummer" required> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="email">Email</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="email" id="email" name="email"><br><br>
+                <label for="sname">Strasse</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" id="sname" name="strasse" required> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="hnummer">Hausnummer</label>&nbsp;&nbsp;
+                <input type="number" id="hnummer" name="hausnummer" required><br><br>
+                <label for="bland">Bundesland</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <select id="bland" name="bundesland" size="1" required> 
+                    <option value=""></option> 
+                    <option value="Baden-Wuerttemberg">Baden-Wuerttemberg</option>
+                    <option value="Bavaria">Bavaria</option>
+                    <option value="Berlin">Berlin</option>
+                    <option value="Brandenburg">Brandenburg</option>
+                    <option value="Bremen">Bremen</option>
+                    <option value="Hamburg">Hamburg</option>
+                    <option value="Hessen">Hessen</option>
+                    <option value="Lower Saxony">Lower Saxony</option>
+                    <option value="Mecklenburg-Vorpommern">Mecklenburg-Vorpommern</option>
+                    <option value="North Rhine-Westphalia">North Rhine-Westphalia</option>
+                    <option value="Rhineland-Palatinate">Rhineland-Palatinate</option>
+                    <option value="Saarland">Saarland</option>
+                    <option value="Saxony">Saxony</option>
+                    <option value="Saxony-Anhalt">Saxony-Anhalt</option>
+                    <option value="Schleswig-Holstein">Schleswig-Holstein</option>
+                    <option value="Thuringia">Thuringia</option>
+                </select> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="plz, ort">PLZ, Ort</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" id="plz, ort" name="plzort" size="2" required>
+                <input type="text" id="plz, ort" name="plzort" size="12" required><br><br>  
+            </fieldset>
+            <fieldset>
+                <legend>Pizzasorten</legend><br>
+                <label for="pizzamar">Pizza Margherita</label> 
+                <input type="checkbox" id="pizzamar" value="Pizza Margherita" name="pizza[]" /> &nbsp; &nbsp;
+                <label for="pizzamari">Pizza Marinara</label>
+                <input type="checkbox" id="pizzamari" value="Pizza Marinara" name="pizza[]" /> &nbsp; &nbsp;
+                <label for="quafor">Pizza Quattro Formaggi</label>
+                <input type="checkbox" id="quafor" value="Pizza Quattro Formaggi" name="pizza[]" /> &nbsp; &nbsp;
+                <label for="salami">Salami</label>
+                <input type="checkbox" id="salami" value="Salami" name="pizza[]" /><br><br>
+                <label for="napoli">Napoli</label>
+                <input type="checkbox" id="napoli" value="Napoli" name="pizza[]" /> &nbsp; &nbsp;
+                <label for="kebpizza">Kebap Pizza</label>
+                <input type="checkbox" id="kebpizza" value="Kebap Pizza" name="pizza[]" /> &nbsp; &nbsp;
+                <label for="mozzarella">Mozzarella</label>
+                <input type="checkbox" id="mozzarella" value="Mozzarella" name="pizza[]" /> &nbsp; &nbsp;
+                <label for="vpizza">Veggie Pizza</label>
+                <input type="checkbox" id="vpizza" value="Veggie Pizza" name="pizza[]" /> &nbsp; &nbsp;
+                <label for="flapizza">Fladenbrot Pizza</label>
+                <input type="checkbox" id="flapizza" value="Fladenbrot Pizza" name="pizza[]" /> &nbsp; &nbsp; <br><br>
+                
+            </fieldset><br>
+            <div class="bestellen">
+            <input type="submit" value="Bestellen">
+            </div>
+            
+        </form>
+    </div>
+</div>
+</body>
+</html>
